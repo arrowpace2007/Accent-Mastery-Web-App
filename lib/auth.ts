@@ -1,12 +1,8 @@
 import { createClientComponentClient, createServerComponentClient } from "@supabase/auth-helpers-nextjs"
-import { cookies } from "next/headers"
 import type { Database } from "./database.types"
 
 // Client-side auth helper
 export const createClient = () => createClientComponentClient<Database>()
-
-// Server-side auth helper
-export const createServerClient = () => createServerComponentClient<Database>({ cookies })
 
 // Auth state management
 export interface AuthUser {
